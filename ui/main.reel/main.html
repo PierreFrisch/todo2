@@ -62,8 +62,14 @@
         "title": {
             "prototype": "montage/ui/text.reel",
             "properties": {
-                "element": {"#": "text"},
                 "value": "My To Dos"
+            }
+        },
+        "title1": {
+            "prototype": "digit/ui/title.reel",
+            "properties": {
+                "element": {"#": "title"},
+                "value": "My To Do"
             }
         },
         "todolist": {
@@ -78,7 +84,7 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <p data-montage-id="text"></p>
+        <h1 data-montage-id="title"></h1>
         <button data-montage-id="button"></button>
         <output data-montage-id="badge"></output>
         <ul data-montage-id="list">
