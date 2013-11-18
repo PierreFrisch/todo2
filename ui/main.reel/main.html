@@ -41,6 +41,15 @@
         "listController": {
             "prototype": "montage/core/range-controller"
         },
+        "task1": {
+            "prototype": "ui/task.reel",
+            "properties": {
+                "element": {"#": "task"}
+            },
+            "bindings": {
+                "task": {"<-": "@todolist.objectAtCurrentIteration"}
+            }
+        },
         "title": {
             "prototype": "montage/ui/text.reel",
             "properties": {
@@ -63,9 +72,7 @@
         <p data-montage-id="text"></p>
         <button data-montage-id="button"></button>
         <ul data-montage-id="list">
-            <li>
-                Item
-            </li>
+            <div data-montage-id="task"></div>
         </ul>
     </div>
 </body>
