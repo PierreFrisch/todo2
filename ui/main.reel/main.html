@@ -38,6 +38,15 @@
                 }
             ]
         },
+        "badge1": {
+            "prototype": "digit/ui/badge.reel",
+            "properties": {
+                "element": {"#": "badge"}
+            },
+            "bindings": {
+                "value": {"<-": "@listController.organizedContent.filter{!completed}.length"}
+            }
+        },
         "listController": {
             "prototype": "montage/core/range-controller"
         },
@@ -71,6 +80,7 @@
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <p data-montage-id="text"></p>
         <button data-montage-id="button"></button>
+        <output data-montage-id="badge"></output>
         <ul data-montage-id="list">
             <div data-montage-id="task"></div>
         </ul>
