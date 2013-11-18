@@ -6,8 +6,29 @@
     <script type="text/montage-serialization">
     {
         "owner": {
+            "prototype": "ui/task.reel",
             "properties": {
                 "element": {"#": "task"}
+            }
+        },
+        "radioButton1": {
+            "prototype": "digit/ui/radio-button.reel",
+            "properties": {
+                "element": {"#": "radio"},
+                "checked": true
+            },
+            "bindings": {
+                "checked": {"<->": "@owner.task.completed"}
+            }
+        },
+        "textField1": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "textField"},
+                "placeholder": "Text"
+            },
+            "bindings": {
+                "value": {"<->": "@owner.task.title"}
             }
         }
     }
@@ -15,6 +36,8 @@
 </head>
 <body>
     <div data-montage-id="task" class="Task">
+        <input type="radio" data-montage-id="radio">
+        <input data-montage-id="textField" type="text">
     </div>
 </body>
 </html>
