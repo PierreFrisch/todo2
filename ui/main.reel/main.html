@@ -46,13 +46,6 @@
                 "value": {"<-": "@listController.organizedContent.filter{!completed}.length"}
             }
         },
-        "button2": {
-            "prototype": "digit/ui/button.reel",
-            "properties": {
-                "enabled": true,
-                "label": "Button"
-            }
-        },
         "listController": {
             "prototype": "montage/core/range-controller"
         },
@@ -93,7 +86,9 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <h1 data-montage-id="title"></h1>
+        <h1 data-montage-id="title">
+
+        </h1>
         <button data-montage-id="button"></button>
         <output data-montage-id="badge"></output>
         <ul data-montage-id="list">
