@@ -53,6 +53,14 @@
                 "label": "Button"
             }
         },
+        "condition": {
+            "prototype": "montage/ui/condition.reel",
+            "properties": {
+                "element": {"#": "condition"},
+                "condition": false,
+                "removalStrategy": "hide"
+            }
+        },
         "listController": {
             "prototype": "montage/core/range-controller"
         },
@@ -95,7 +103,9 @@
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <h1 data-montage-id="title"></h1>
         <button data-montage-id="button"></button>
-        <output data-montage-id="badge"></output>
+        <div data-montage-id="condition">
+            <output data-montage-id="badge"></output>
+        </div>
         <ul data-montage-id="list">
             <div data-montage-id="task"></div>
         </ul>
